@@ -1,0 +1,1221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dharsh Casinathen — Cannabis Authority, Educator, Speaker</title>
+<meta name="description" content="Dharsh Casinathen is a Certified Ganjier, Co-Founder of Joyleaf, and a sought-after speaker bringing two decades of Fortune 50 leadership to the cannabis industry.">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Dharsh Casinathen — Cannabis Authority & Speaker">
+<meta property="og:description" content="From KPMG and PepsiCo boardrooms to the first dispensary in New Jersey that lets you touch the product. A new voice in cannabis leadership.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://cannadharsh.com">
+<meta property="og:image" content="https://cannadharsh.com/dharsh-portrait.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://cannadharsh.com/dharsh-portrait.png">
+
+<!-- Fonts: Fraunces (editorial serif) + Inter Tight (refined body) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Inter+Tight:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+/* ============================================
+   DHARSH CASINATHEN — EDITORIAL SITE
+   ============================================ */
+
+:root {
+  --ink: #1c1815;
+  --ink-soft: #332d27;
+  --cream: #f3ede0;
+  --cream-deep: #e5dcc7;
+  --moss: #3d4a38;
+  --moss-deep: #2b3527;
+  --rust: #b55a3c;
+  --paper: #f8f2e4;
+  --rule: rgba(28, 24, 21, 0.18);
+  --rule-soft: rgba(28, 24, 21, 0.08);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'Inter Tight', system-ui, sans-serif;
+  font-weight: 400;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+img { display: block; max-width: 100%; }
+
+a { color: inherit; text-decoration: none; }
+
+/* ============================================
+   GRAIN OVERLAY — warms up the whole page
+   ============================================ */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 100;
+  opacity: 0.35;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/%3E%3CfeColorMatrix values='0 0 0 0 0.1 0 0 0 0 0.08 0 0 0 0 0.05 0 0 0 0.08 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ============================================
+   NAV
+   ============================================ */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  padding: 1.75rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(250, 247, 239, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--rule-soft);
+  transition: transform 0.4s ease;
+}
+
+.nav-mark {
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+  font-size: 1.05rem;
+  letter-spacing: -0.01em;
+  font-style: italic;
+}
+
+.nav-mark span {
+  font-style: normal;
+  font-weight: 400;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2.75rem;
+  list-style: none;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.nav-links a {
+  position: relative;
+  padding-bottom: 2px;
+  transition: color 0.3s;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background: var(--ink);
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after { width: 100%; }
+
+.nav-cta {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-size: 0.9rem;
+  text-transform: none;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+
+/* ============================================
+   HERO — editorial masthead
+   ============================================ */
+.hero {
+  min-height: 100vh;
+  padding: 9rem 3rem 4rem;
+  display: grid;
+  grid-template-columns: 1fr 0.95fr;
+  gap: 4rem;
+  align-items: center;
+  position: relative;
+}
+
+.hero-meta {
+  position: absolute;
+  top: 7rem;
+  left: 3rem;
+  display: flex;
+  gap: 2rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  font-weight: 500;
+}
+
+.hero-meta span {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.hero-meta span::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: var(--rust);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.hero-text {
+  position: relative;
+}
+
+.hero-eyebrow {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.15rem;
+  color: var(--moss);
+  margin-bottom: 1.5rem;
+  opacity: 0;
+  animation: riseIn 1s cubic-bezier(0.2, 0.8, 0.2, 1) 0.2s forwards;
+}
+
+.hero-title {
+  font-family: 'Fraunces', serif;
+  font-weight: 400;
+  font-size: clamp(3.5rem, 7.5vw, 7rem);
+  line-height: 0.95;
+  letter-spacing: -0.035em;
+  color: var(--ink);
+  margin-bottom: 2rem;
+  opacity: 0;
+  animation: riseIn 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) 0.4s forwards;
+}
+
+.hero-title em {
+  font-style: italic;
+  font-weight: 300;
+  color: var(--moss-deep);
+}
+
+.hero-divider {
+  width: 80px;
+  height: 1px;
+  background: var(--ink);
+  margin: 2rem 0;
+  opacity: 0;
+  animation: expandIn 1s ease 0.9s forwards;
+  transform-origin: left;
+}
+
+@keyframes expandIn {
+  from { opacity: 0; transform: scaleX(0); }
+  to { opacity: 1; transform: scaleX(1); }
+}
+
+.hero-sub {
+  font-size: 1.15rem;
+  line-height: 1.55;
+  max-width: 42ch;
+  color: var(--ink-soft);
+  font-weight: 400;
+  opacity: 0;
+  animation: riseIn 1s ease 1.1s forwards;
+}
+
+@keyframes riseIn {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-image-wrap {
+  position: relative;
+  aspect-ratio: 3/4;
+  overflow: hidden;
+  opacity: 0;
+  animation: fadeScale 1.4s cubic-bezier(0.2, 0.8, 0.2, 1) 0.3s forwards;
+}
+
+@keyframes fadeScale {
+  from { opacity: 0; transform: scale(1.05); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.hero-image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: contrast(1.02) saturate(1.02);
+}
+
+.hero-image-tag {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  background: var(--paper);
+  padding: 0.6rem 1rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+/* ============================================
+   MARQUEE — credentials strip
+   ============================================ */
+.marquee {
+  background: var(--ink);
+  color: var(--cream);
+  padding: 1.5rem 0;
+  overflow: hidden;
+  border-top: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+}
+
+.marquee-track {
+  display: flex;
+  gap: 4rem;
+  white-space: nowrap;
+  animation: scroll 45s linear infinite;
+  font-family: 'Fraunces', serif;
+  font-weight: 400;
+  font-size: 1.25rem;
+  letter-spacing: -0.01em;
+}
+
+.marquee-track span {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  font-style: italic;
+}
+
+.marquee-track span::after {
+  content: '✦';
+  font-style: normal;
+  color: var(--rust);
+  font-size: 0.8rem;
+}
+
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* ============================================
+   STORY — the arc
+   ============================================ */
+.story {
+  padding: 10rem 3rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 6rem;
+}
+
+.section-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--moss);
+  font-weight: 600;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.section-label::before {
+  content: '';
+  width: 28px;
+  height: 1px;
+  background: var(--moss);
+}
+
+.story-sidebar {
+  position: sticky;
+  top: 8rem;
+  align-self: start;
+}
+
+.story-heading {
+  font-family: 'Fraunces', serif;
+  font-size: 2.5rem;
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+}
+
+.story-heading em {
+  font-style: italic;
+  font-weight: 300;
+}
+
+.story-body {
+  font-size: 1.25rem;
+  line-height: 1.7;
+  color: var(--ink-soft);
+  font-weight: 400;
+}
+
+.story-body p { margin-bottom: 1.75rem; }
+
+.story-body p:first-of-type::first-letter {
+  font-family: 'Fraunces', serif;
+  font-size: 5.5rem;
+  line-height: 0.85;
+  float: left;
+  font-weight: 400;
+  margin: 0.3rem 0.75rem 0 0;
+  color: var(--moss-deep);
+}
+
+.story-body em {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--ink);
+}
+
+.pull-quote {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-size: 1.75rem;
+  line-height: 1.35;
+  color: var(--moss-deep);
+  padding: 2rem 0;
+  margin: 2.5rem 0;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+/* ============================================
+   CREDENTIALS — three-column authority grid
+   ============================================ */
+.credentials {
+  background: var(--cream);
+  padding: 8rem 3rem;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+}
+
+.credentials-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.credentials-header {
+  margin-bottom: 5rem;
+  max-width: 720px;
+}
+
+.credentials-title {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1;
+  letter-spacing: -0.03em;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+}
+
+.credentials-title em { font-style: italic; font-weight: 300; }
+
+.credentials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  border-left: 1px solid var(--rule);
+}
+
+.credential {
+  padding: 3rem 2.5rem;
+  border-right: 1px solid var(--rule);
+  border-top: 1px solid var(--rule);
+  position: relative;
+  transition: background 0.4s;
+}
+
+.credential:hover { background: var(--cream-deep); }
+
+.credential:nth-child(n+4) { border-top: 1px solid var(--rule); }
+
+.credential-num {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--rust);
+  margin-bottom: 1.25rem;
+}
+
+.credential-title {
+  font-family: 'Fraunces', serif;
+  font-size: 1.6rem;
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.credential-body {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--ink-soft);
+}
+
+/* ============================================
+   SPEAKING — topics as editorial entries
+   ============================================ */
+.speaking {
+  padding: 10rem 3rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.speaking-header {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 6rem;
+  margin-bottom: 5rem;
+  align-items: end;
+}
+
+.speaking-title {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(3rem, 6vw, 5rem);
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+  font-weight: 400;
+}
+
+.speaking-title em { font-style: italic; font-weight: 300; }
+
+.speaking-intro {
+  font-size: 1.1rem;
+  line-height: 1.65;
+  color: var(--ink-soft);
+  max-width: 48ch;
+}
+
+.topics {
+  border-top: 1px solid var(--ink);
+}
+
+.topic {
+  display: grid;
+  grid-template-columns: 80px 1fr 2fr;
+  gap: 3rem;
+  padding: 2.5rem 1rem;
+  border-bottom: 1px solid var(--rule);
+  align-items: baseline;
+  transition: background 0.3s, padding 0.3s;
+  cursor: default;
+}
+
+.topic:hover {
+  background: var(--cream);
+  padding-left: 2rem;
+}
+
+.topic-num {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--rust);
+  font-weight: 400;
+}
+
+.topic-title {
+  font-family: 'Fraunces', serif;
+  font-size: 1.8rem;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  font-weight: 500;
+}
+
+.topic-title em { font-style: italic; font-weight: 300; }
+
+.topic-desc {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--ink-soft);
+}
+
+/* ============================================
+   PRESS — media mentions as feature wall
+   ============================================ */
+.press {
+  background: var(--moss-deep);
+  color: var(--cream);
+  padding: 10rem 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.press::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(245, 241, 232, 0.2), transparent);
+}
+
+.press-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.press-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 5rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(245, 241, 232, 0.2);
+}
+
+.press-title {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1;
+  letter-spacing: -0.03em;
+  font-weight: 400;
+}
+
+.press-title em { font-style: italic; font-weight: 300; color: var(--cream-deep); }
+
+.press-meta {
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(245, 241, 232, 0.7);
+}
+
+.press-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
+}
+
+.press-item {
+  padding: 3rem 2.5rem;
+  border-bottom: 1px solid rgba(245, 241, 232, 0.15);
+  transition: background 0.3s;
+  display: block;
+  position: relative;
+}
+
+.press-item:nth-child(odd) {
+  border-right: 1px solid rgba(245, 241, 232, 0.15);
+}
+
+.press-item:hover {
+  background: rgba(245, 241, 232, 0.04);
+}
+
+.press-item:hover .press-arrow {
+  transform: translate(4px, -4px);
+}
+
+.press-outlet {
+  font-size: 0.72rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--rust);
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.press-headline {
+  font-family: 'Fraunces', serif;
+  font-size: 1.65rem;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+  font-weight: 400;
+  margin-bottom: 1.25rem;
+  color: var(--cream);
+}
+
+.press-headline em { font-style: italic; }
+
+.press-excerpt {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: rgba(245, 241, 232, 0.75);
+  margin-bottom: 1.5rem;
+}
+
+.press-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.press-arrow {
+  font-family: 'Fraunces', serif;
+  font-size: 1.4rem;
+  font-style: italic;
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+/* ============================================
+   CTA / CONTACT
+   ============================================ */
+.contact {
+  padding: 10rem 3rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+}
+
+.contact::before {
+  content: '✦';
+  position: absolute;
+  top: 5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--rust);
+  font-size: 1.2rem;
+}
+
+.contact-eyebrow {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--moss);
+  margin-bottom: 1.5rem;
+}
+
+.contact-headline {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(3rem, 7vw, 5.5rem);
+  line-height: 1;
+  letter-spacing: -0.035em;
+  font-weight: 400;
+  margin-bottom: 2.5rem;
+}
+
+.contact-headline em { font-style: italic; font-weight: 300; }
+
+.contact-sub {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: var(--ink-soft);
+  max-width: 52ch;
+  margin: 0 auto 3.5rem;
+}
+
+.contact-email {
+  display: inline-block;
+  font-family: 'Fraunces', serif;
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-style: italic;
+  font-weight: 400;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--ink);
+  transition: color 0.3s, border-color 0.3s;
+  letter-spacing: -0.015em;
+}
+
+.contact-email:hover {
+  color: var(--rust);
+  border-bottom-color: var(--rust);
+}
+
+.contact-details {
+  margin-top: 4rem;
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  font-weight: 500;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.footer {
+  background: var(--ink);
+  color: var(--cream);
+  padding: 4rem 3rem 2.5rem;
+  border-top: 1px solid var(--ink);
+}
+
+.footer-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 3rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid rgba(245, 241, 232, 0.15);
+}
+
+.footer-mark {
+  font-family: 'Fraunces', serif;
+  font-size: 2.25rem;
+  line-height: 1;
+  letter-spacing: -0.025em;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+
+.footer-mark em { font-style: italic; font-weight: 300; }
+
+.footer-tagline {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-size: 1rem;
+  color: rgba(245, 241, 232, 0.7);
+}
+
+.footer-col h4 {
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--rust);
+  font-weight: 500;
+  margin-bottom: 1.25rem;
+}
+
+.footer-col ul {
+  list-style: none;
+  font-size: 0.95rem;
+  line-height: 2;
+  color: rgba(245, 241, 232, 0.85);
+}
+
+.footer-col a:hover { color: var(--cream); }
+
+.footer-bottom {
+  max-width: 1400px;
+  margin: 2.5rem auto 0;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(245, 241, 232, 0.5);
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 900px) {
+  .nav { padding: 1.25rem 1.5rem; }
+  .nav-links { display: none; }
+  .nav-cta { font-size: 0.85rem; }
+
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding: 7.5rem 1.5rem 3rem;
+  }
+  .hero-meta { left: 1.5rem; top: 5.5rem; gap: 1.25rem; font-size: 0.65rem; }
+
+  .story {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    padding: 5rem 1.5rem;
+  }
+  .story-sidebar { position: static; }
+  .story-body { font-size: 1.1rem; }
+  .story-body p:first-of-type::first-letter { font-size: 4rem; }
+  .pull-quote { font-size: 1.35rem; }
+
+  .credentials { padding: 5rem 1.5rem; }
+  .credentials-grid { grid-template-columns: 1fr; border-left: none; }
+  .credential { border-right: none; padding: 2.25rem 0; }
+
+  .speaking { padding: 5rem 1.5rem; }
+  .speaking-header { grid-template-columns: 1fr; gap: 2rem; }
+  .topic { grid-template-columns: 1fr; gap: 0.75rem; padding: 2rem 0.5rem; }
+  .topic:hover { padding-left: 1rem; }
+  .topic-title { font-size: 1.4rem; }
+
+  .press { padding: 5rem 1.5rem; }
+  .press-header { flex-direction: column; gap: 1rem; align-items: flex-start; }
+  .press-grid { grid-template-columns: 1fr; }
+  .press-item { padding: 2.5rem 0; border-right: none !important; }
+  .press-headline { font-size: 1.35rem; }
+
+  .contact { padding: 5rem 1.5rem; }
+  .contact-details { flex-direction: column; gap: 1rem; }
+
+  .footer { padding: 3rem 1.5rem 2rem; }
+  .footer-inner { grid-template-columns: 1fr; gap: 2rem; padding-bottom: 2rem; }
+  .footer-bottom { flex-direction: column; gap: 0.75rem; }
+}
+
+/* Reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+  .marquee-track { animation: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<nav class="nav">
+  <div class="nav-mark"><span>Dharsh</span> Casinathen</div>
+  <ul class="nav-links">
+    <li><a href="#story">Story</a></li>
+    <li><a href="#credentials">Credentials</a></li>
+    <li><a href="#speaking">Speaking</a></li>
+    <li><a href="#press">Press</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Book a conversation →</a>
+</nav>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero-meta">
+    <span>Est. Cannabis Authority</span>
+    <span>New Jersey · New York</span>
+  </div>
+
+  <div class="hero-text">
+    <div class="hero-eyebrow">Educator · Certified Ganjier · Entrepreneur</div>
+    <h1 class="hero-title">
+      From the<br>
+      boardroom<br>
+      <em>to the plant.</em>
+    </h1>
+    <div class="hero-divider"></div>
+    <p class="hero-sub">
+      Two decades inside KPMG and PepsiCo. A second act built on cannabis education, advocacy, and the belief that the plant deserves more than caricature.
+    </p>
+  </div>
+
+  <div class="hero-image-wrap">
+    <img src="dharsh-portrait.png" alt="Dharsh Casinathen at Joyleaf Dispensary, Roselle, New Jersey">
+    <div class="hero-image-tag">At Joyleaf · Roselle, NJ</div>
+  </div>
+</section>
+
+<!-- ============ MARQUEE ============ -->
+<div class="marquee">
+  <div class="marquee-track">
+    <span>Certified Ganjier</span>
+    <span>Co-Founder, Joyleaf</span>
+    <span>Former PepsiCo Leadership</span>
+    <span>KPMG Canada Alumni</span>
+    <span>NJBIZ Women-Owned 2024</span>
+    <span>FOX 5 NY Featured</span>
+    <span>Cannabis Educator</span>
+    <!-- duplicated for seamless loop -->
+    <span>Certified Ganjier</span>
+    <span>Co-Founder, Joyleaf</span>
+    <span>Former PepsiCo Leadership</span>
+    <span>KPMG Canada Alumni</span>
+    <span>NJBIZ Women-Owned 2024</span>
+    <span>FOX 5 NY Featured</span>
+    <span>Cannabis Educator</span>
+  </div>
+</div>
+
+<!-- ============ STORY ============ -->
+<section class="story" id="story">
+  <aside class="story-sidebar">
+    <div class="section-label">The Arc</div>
+    <h2 class="story-heading">A second act,<br><em>earned slowly.</em></h2>
+  </aside>
+
+  <div class="story-body">
+    <p>
+      Born in Sri Lanka and raised through displacement, Dharsh built her career the traditional way first. Toronto. Chartered accounting at KPMG. Thirteen years at PepsiCo, climbing into leadership roles inside one of the most disciplined operating cultures in the world.
+    </p>
+    <p>
+      Then, in 2018, cannabis stopped being someone else's conversation. As a medical patient in New Jersey, Dharsh watched the plant do what corporate wellness programs had spent years trying to promise. <em>Something shifted.</em>
+    </p>
+
+    <div class="pull-quote">
+      "The typical narratives around cannabis don't capture its essence, or its potential. My work is to change that."
+    </div>
+
+    <p>
+      By 2023, she had earned her certification through the Ganjier program, the industry's most rigorous sommelier-style credential. That same year, she co-founded <em>Joyleaf</em>, the only dispensary in New Jersey that lets customers actually touch the product, browse the shelves, and make informed decisions without shame.
+    </p>
+    <p>
+      Now she speaks to rooms that once looked like the ones she came from. Boardrooms. Industry panels. Newsrooms. The message hasn't changed since Sri Lanka: know what you're working with, and treat it with respect.
+    </p>
+  </div>
+</section>
+
+<!-- ============ CREDENTIALS ============ -->
+<section class="credentials" id="credentials">
+  <div class="credentials-inner">
+    <div class="credentials-header">
+      <div class="section-label">The Receipts</div>
+      <h2 class="credentials-title">Credentials that cross <em>two industries.</em></h2>
+    </div>
+
+    <div class="credentials-grid">
+      <div class="credential">
+        <div class="credential-num">No. 01</div>
+        <h3 class="credential-title">Certified Ganjier</h3>
+        <p class="credential-body">
+          One of fewer than 400 globally. The Ganjier program is the cannabis industry's most demanding sommelier-style certification, covering botany, terpene science, sensory evaluation, and cultural history.
+        </p>
+      </div>
+
+      <div class="credential">
+        <div class="credential-num">No. 02</div>
+        <h3 class="credential-title">Co-Founder, Joyleaf</h3>
+        <p class="credential-body">
+          New Jersey's education-first dispensary. Voted Best New Business in Roselle. Built around a radical idea: that customers should be allowed to see, touch, and understand what they're buying.
+        </p>
+      </div>
+
+      <div class="credential">
+        <div class="credential-num">No. 03</div>
+        <h3 class="credential-title">20+ Years Corporate Leadership</h3>
+        <p class="credential-body">
+          KPMG Canada. Thirteen years at PepsiCo in multiple leadership roles across finance and operations. A Fortune 50 operating background most cannabis entrepreneurs don't have.
+        </p>
+      </div>
+
+      <div class="credential">
+        <div class="credential-num">No. 04</div>
+        <h3 class="credential-title">Featured on FOX 5 NY</h3>
+        <p class="credential-body">
+          Sat down with FOX 5's Bianca Peters for an in-depth conversation on the Ganjier program, Joyleaf's first year, and the future of retail cannabis in the Northeast.
+        </p>
+      </div>
+
+      <div class="credential">
+        <div class="credential-num">No. 05</div>
+        <h3 class="credential-title">NJBIZ Women-Owned 2024</h3>
+        <p class="credential-body">
+          Recognized in the NJBIZ In The Lead feature celebrating New Jersey women building prosperous companies through energy, talent, and perseverance.
+        </p>
+      </div>
+
+      <div class="credential">
+        <div class="credential-num">No. 06</div>
+        <h3 class="credential-title">Women's Health Advocate</h3>
+        <p class="credential-body">
+          Public advocate for cannabis as a tool for women's health, speaking openly about her own journey with chronic illness and the research gap no one else is filling.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SPEAKING ============ -->
+<section class="speaking" id="speaking">
+  <div class="speaking-header">
+    <h2 class="speaking-title">Speaking <em>topics</em></h2>
+    <p class="speaking-intro">
+      Dharsh speaks at conferences, industry panels, corporate events, and universities. Every talk is built for the room, not recycled. A short sample of the conversations she's currently having.
+    </p>
+  </div>
+
+  <div class="topics">
+    <div class="topic">
+      <div class="topic-num">01</div>
+      <h3 class="topic-title">From Fortune 50 <em>to the Plant</em></h3>
+      <p class="topic-desc">How two decades inside PepsiCo prepared (and unprepared) her for building a consumer brand in one of the most regulated industries in America. For executive audiences.</p>
+    </div>
+
+    <div class="topic">
+      <div class="topic-num">02</div>
+      <h3 class="topic-title">The Ganjier Standard</h3>
+      <p class="topic-desc">Why cannabis needed a sommelier program, what the certification actually teaches, and how education changes every conversation between consumer and product.</p>
+    </div>
+
+    <div class="topic">
+      <div class="topic-num">03</div>
+      <h3 class="topic-title">Cannabis & <em>Women's Health</em></h3>
+      <p class="topic-desc">The research gap, the lived experience, and the cultural reasons women are disproportionately medicated yet disproportionately skeptical of the plant.</p>
+    </div>
+
+    <div class="topic">
+      <div class="topic-num">04</div>
+      <h3 class="topic-title">Building a Retail Experience <em>That Doesn't Feel Like a Bodega</em></h3>
+      <p class="topic-desc">The design, operational, and educational decisions behind Joyleaf. For retail, CPG, and hospitality audiences interested in customer experience.</p>
+    </div>
+
+    <div class="topic">
+      <div class="topic-num">05</div>
+      <h3 class="topic-title">Women, Immigration <em>& Reinvention</em></h3>
+      <p class="topic-desc">A keynote on the arc of leaving one country, building a career inside corporate America, and starting over on her own terms. For DEI, leadership, and women's events.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRESS ============ -->
+<section class="press" id="press">
+  <div class="press-inner">
+    <div class="press-header">
+      <h2 class="press-title"><em>In</em> the press</h2>
+      <div class="press-meta">Selected features · 2024–2025</div>
+    </div>
+
+    <div class="press-grid">
+      <a href="https://www.youtube.com/watch?v=4NXQoQRcMbk" target="_blank" rel="noopener" class="press-item">
+        <div class="press-outlet">FOX 5 New York</div>
+        <h3 class="press-headline">Cannabis Dispensary Owner & Certified Ganjier <em>on FOX 5 NY</em></h3>
+        <p class="press-excerpt">Dharsh sat down with FOX 5 NY's Bianca Peters, herself a certified wine sommelier, to discuss her cannabis journey, the Ganjier program, and the first year of Joyleaf.</p>
+        <div class="press-footer">
+          <span>Watch interview</span>
+          <span class="press-arrow">↗</span>
+        </div>
+      </a>
+
+      <a href="https://njbiz.com/women-owned-dispensaries-work-to-weed-out-cannabis-misconceptions/" target="_blank" rel="noopener" class="press-item">
+        <div class="press-outlet">NJBIZ</div>
+        <h3 class="press-headline">Women-owned dispensaries <em>weed out misconceptions</em></h3>
+        <p class="press-excerpt">Female-led shops across New Jersey are reshaping the industry. Dharsh on leadership, operations, and running a business that still has to prove itself every day.</p>
+        <div class="press-footer">
+          <span>Read feature</span>
+          <span class="press-arrow">↗</span>
+        </div>
+      </a>
+
+      <a href="https://budsfeed.com/blogpost/advice-for-aspiring-female-cannabis-professionals-industry-leaders-weigh-in-1711561335682x129204222252810240" target="_blank" rel="noopener" class="press-item">
+        <div class="press-outlet">BudsFeed × Cannabis NewsHub</div>
+        <h3 class="press-headline">Advice for Aspiring Female <em>Cannabis Professionals</em></h3>
+        <p class="press-excerpt">In celebration of Women's History Month, industry leaders shared insight and advice for professionals entering cannabis. Dharsh on what she wishes she'd known at the start.</p>
+        <div class="press-footer">
+          <span>Read feature</span>
+          <span class="press-arrow">↗</span>
+        </div>
+      </a>
+
+      <a href="https://www.youtube.com/watch?v=B9DmQr-YoK8" target="_blank" rel="noopener" class="press-item">
+        <div class="press-outlet">Roselle Women Entrepreneurs</div>
+        <h3 class="press-headline">A conversation with <em>Dharsh Casinathen</em></h3>
+        <p class="press-excerpt">An honest interview on building Joyleaf, navigating gender bias in a new industry, and why retail cannabis can be a welcoming space when it's built deliberately.</p>
+        <div class="press-footer">
+          <span>Watch conversation</span>
+          <span class="press-arrow">↗</span>
+        </div>
+      </a>
+
+      <a href="https://njbiz.com/e-p-njbiz-in-the-lead-2024-women-owned-businesses/" target="_blank" rel="noopener" class="press-item">
+        <div class="press-outlet">NJBIZ · In The Lead</div>
+        <h3 class="press-headline">2024 Women-Owned <em>Businesses</em></h3>
+        <p class="press-excerpt">NJBIZ's annual feature on New Jersey women using energy, talent, and perseverance to build prosperous companies. Dharsh recognized for her work at Joyleaf.</p>
+        <div class="press-footer">
+          <span>Read feature</span>
+          <span class="press-arrow">↗</span>
+        </div>
+      </a>
+
+      <a href="https://flowerhire.com/talent-in-cannabis-dharsh-casinathen/" target="_blank" rel="noopener" class="press-item">
+        <div class="press-outlet">FlowerHire · Talent in Cannabis</div>
+        <h3 class="press-headline">A <em>rainbow</em> approach to business</h3>
+        <p class="press-excerpt">An extended interview on Sri Lanka, Toronto, PepsiCo, and the decision to start over in cannabis. The most complete version of the story in print.</p>
+        <div class="press-footer">
+          <span>Read interview</span>
+          <span class="press-arrow">↗</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="contact" id="contact">
+  <div class="contact-eyebrow">For speaking, consulting, and press</div>
+  <h2 class="contact-headline">Let's have the <em>real conversation.</em></h2>
+  <p class="contact-sub">
+    Event bookings, media requests, and strategic consulting inquiries are best sent directly. Expect a thoughtful reply within a few business days.
+  </p>
+  <a href="mailto:cannadharsh@gmail.com?subject=Inquiry%20from%20cannadharsh.com" class="contact-email">cannadharsh@gmail.com</a>
+
+  <div class="contact-details">
+    <span>Based in New Jersey</span>
+    <span>Available Worldwide</span>
+    <span>Speaking · Consulting · Media</span>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-mark">Dharsh <em>Casinathen</em></div>
+      <div class="footer-tagline">Corporate veteran. Certified Ganjier. Cannabis authority.</div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="#story">Story</a></li>
+        <li><a href="#credentials">Credentials</a></li>
+        <li><a href="#speaking">Speaking</a></li>
+        <li><a href="#press">Press</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Elsewhere</h4>
+      <ul>
+        <li><a href="https://www.instagram.com/cannadharsh/" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="https://www.linkedin.com/in/dharshcasi/" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://www.tiktok.com/@cannadharsh" target="_blank" rel="noopener">TikTok</a></li>
+        <li><a href="https://twitter.com/iamcannadharsh" target="_blank" rel="noopener">X / Twitter</a></li>
+        <li><a href="https://www.joyleaf.com" target="_blank" rel="noopener">Joyleaf →</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div>© 2026 Dharsh Casinathen</div>
+    <div>Designed with intention</div>
+  </div>
+</footer>
+
+<script>
+  // Gentle nav hide on scroll down, reveal on scroll up
+  let lastScroll = 0;
+  const nav = document.querySelector('.nav');
+  window.addEventListener('scroll', () => {
+    const current = window.pageYOffset;
+    if (current > lastScroll && current > 100) {
+      nav.style.transform = 'translateY(-100%)';
+    } else {
+      nav.style.transform = 'translateY(0)';
+    }
+    lastScroll = current;
+  });
+</script>
+
+</body>
+</html>
