@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dharsh Casinathen — Leadership, Learning, and Building in Real Time</title>
+<title>Dharsh Casinathen - Leadership, Learning, and Building in Real Time</title>
 <meta name="description" content="Dharsh Casinathen writes Field Notes on leadership, learning, AI, and building in real time after two decades inside KPMG and PepsiCo and an award-winning business of her own.">
 
 <!-- Open Graph -->
-<meta property="og:title" content="Dharsh Casinathen — Leadership, Learning, and Building in Real Time">
-<meta property="og:description" content="Leadership, learning, AI, and building in real time — without the hustle, noise, or burnout everyone else is selling.">
+<meta property="og:title" content="Dharsh Casinathen - Leadership, Learning, and Building in Real Time">
+<meta property="og:description" content="Leadership, learning, AI, and building in real time - without the hustle, noise, or burnout everyone else is selling.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://cannadharsh.com">
 <meta property="og:image" content="https://cannadharsh.com/dharsh-portrait.png">
@@ -22,7 +22,7 @@
 
 <style>
 /* ============================================
-   DHARSH CASINATHEN — EDITORIAL SITE
+   DHARSH CASINATHEN - EDITORIAL SITE
    ============================================ */
 
 :root {
@@ -57,7 +57,7 @@ img { display: block; max-width: 100%; }
 a { color: inherit; text-decoration: none; }
 
 /* ============================================
-   GRAIN OVERLAY — warms up the whole page
+   GRAIN OVERLAY - warms up the whole page
    ============================================ */
 body::before {
   content: '';
@@ -142,7 +142,7 @@ body::before {
 }
 
 /* ============================================
-   HERO — editorial masthead
+   HERO - editorial masthead
    ============================================ */
 .hero {
   min-height: 100vh;
@@ -326,7 +326,7 @@ body::before {
 }
 
 /* ============================================
-   MARQUEE — credentials strip
+   MARQUEE - credentials strip
    ============================================ */
 .marquee {
   background: var(--ink);
@@ -368,7 +368,7 @@ body::before {
 }
 
 /* ============================================
-   STORY — the arc
+   STORY - the arc
    ============================================ */
 .story {
   padding: 10rem 3rem;
@@ -459,7 +459,7 @@ body::before {
 }
 
 /* ============================================
-   FIELD NOTES — email list placeholder
+   FIELD NOTES - email list placeholder
    ============================================ */
 .field-notes {
   padding: 7rem 3rem;
@@ -535,8 +535,14 @@ body::before {
   letter-spacing: 0.14em;
   text-transform: uppercase;
   font-weight: 600;
-  cursor: not-allowed;
-  opacity: 0.88;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.3s, border-color 0.3s;
+}
+
+.field-button:hover {
+  background: var(--rust);
+  border-color: var(--rust);
 }
 
 .field-microcopy {
@@ -556,7 +562,7 @@ body::before {
 }
 
 /* ============================================
-   METHOD — operating system cards
+   METHOD - operating system cards
    ============================================ */
 .method {
   padding: 8rem 3rem;
@@ -632,7 +638,7 @@ body::before {
 }
 
 /* ============================================
-   CURRENT CHAPTER — AI as learning chapter
+   CURRENT CHAPTER - AI as learning chapter
    ============================================ */
 .chapter {
   background: var(--moss-deep);
@@ -665,7 +671,7 @@ body::before {
 }
 
 /* ============================================
-   CREDENTIALS — three-column authority grid
+   CREDENTIALS - three-column authority grid
    ============================================ */
 .credentials {
   background: var(--cream);
@@ -738,7 +744,7 @@ body::before {
 }
 
 /* ============================================
-   SPEAKING — topics as editorial entries
+   SPEAKING - topics as editorial entries
    ============================================ */
 .speaking {
   padding: 10rem 3rem;
@@ -816,7 +822,7 @@ body::before {
 }
 
 /* ============================================
-   PRESS — media mentions as feature wall
+   PRESS - media mentions as feature wall
    ============================================ */
 .press {
   background: var(--moss-deep);
@@ -1187,7 +1193,7 @@ body::before {
     </h1>
     <div class="hero-divider"></div>
     <p class="hero-sub">
-      Twenty years inside KPMG and PepsiCo. An award-winning business of my own. Now I'm accelerating with AI — without the hustle, the noise, or the burnout everyone else is selling. I write down what I learn as I learn it.
+      Twenty years inside KPMG and PepsiCo. An award-winning business of my own. Now I'm accelerating with AI - without the hustle, the noise, or the burnout everyone else is selling. I write down what I learn as I learn it.
     </p>
     <div class="hero-actions">
       <a href="#field-notes" class="button-primary">Get the field notes →</a>
@@ -1230,18 +1236,20 @@ body::before {
       <div class="section-label">The list</div>
       <h2 class="field-notes-title">What I'm learning, <em>as I learn it.</em></h2>
       <p class="field-notes-body">
-        No hype. No AI-bro noise. Just what's actually working for someone who has to make payroll, read a P&amp;L, and lead real people — sent when it's worth your inbox, and not before.
+        No hype. Just what's actually working for someone who has to make payroll, read a P&amp;L, and lead real people - sent when it's worth your inbox, and not before.
       </p>
     </div>
 
-    <div class="field-form" aria-label="Field Notes signup placeholder">
+    <div class="field-form" aria-label="Field Notes signup">
+      <form action="https://formspree.io/f/mjgzzyzb" method="POST">
       <div class="field-form-row">
-        <input class="field-input" type="email" placeholder="Email address" aria-label="Email address" disabled>
-        <button class="field-button" type="button" disabled>Join →</button>
+        <input class="field-input" type="email" name="email" placeholder="Email address" aria-label="Email address" required>
+        <button class="field-button" type="submit">Join →</button>
       </div>
       <p class="field-microcopy">
-        I say no to nine out of ten things. This list reflects that. Field Notes opens soon; for now, reach Dharsh at <a href="mailto:dharsh@cannadharsh.com">dharsh@cannadharsh.com</a>.
+        I say no to nine out of ten things. This list reflects that. For speaking or consulting, reach Dharsh at <a href="mailto:cannadharsh@gmail.com">cannadharsh@gmail.com</a>.
       </p>
+      </form>
     </div>
   </div>
 </section>
@@ -1257,7 +1265,7 @@ body::before {
     <p>My parents came to Canada with $2,500.</p>
 
     <p>
-      Not as a beginning — as a reversal. A civil war in Sri Lanka made the choice for them, and they left behind what would have become generational wealth: the standing they'd built, the future that was already theirs. They traded it for $2,500 and a country they'd never seen, and started over from below the beginning.
+      Not as a beginning - as a reversal. A civil war in Sri Lanka made the choice for them, and they left behind what would have become generational wealth: the standing they'd built, the future that was already theirs. They traded it for $2,500 and a country they'd never seen, and started over from below the beginning.
     </p>
     <p>
       They went backwards on purpose, betting everything on a bigger version of a life they wouldn't fully live to see. That bet is the reason I get to build any of this. The freedom to do it on my own terms is the inheritance they crossed an ocean to leave me.
@@ -1266,7 +1274,7 @@ body::before {
       So I climbed the ladder they came here for. CPA at KPMG. Thirteen years at PepsiCo, where I built an e-commerce business from scratch and scaled it from $100 million to over $1.5 billion. By every measure on the checklist, I had arrived.
     </p>
     <p>
-      And then I left it — to build something that was mine.
+      And then I left it - to build something that was mine.
     </p>
 
     <div class="pull-quote">
@@ -1274,7 +1282,7 @@ body::before {
     </div>
 
     <p>
-      What I learned building JoyLeaf had less to do with cannabis than with people — how power works, how respect differs from being liked, how most ceilings are just stories we tell ourselves. The plant is the arena. Leadership is the work.
+      What I learned building JoyLeaf had less to do with cannabis than with people - how power works, how respect differs from being liked, how most ceilings are just stories we tell ourselves. The plant is the arena. Leadership is the work.
     </p>
   </div>
 </section>
@@ -1285,7 +1293,7 @@ body::before {
     <div class="section-label">The method</div>
     <h2 class="method-title">How I actually <em>operate.</em></h2>
     <p class="method-intro">
-      I don't run on hustle. I run on an older discipline. You can build something serious while moving slower, more deliberately, more aligned — not in spite of it.
+      I don't run on hustle. I run on an older discipline. You can build something serious while moving slower, more deliberately, more aligned - not in spite of it.
     </p>
   </div>
 
@@ -1303,7 +1311,7 @@ body::before {
     <div class="method-card">
       <div class="method-num">03</div>
       <h3>The power of no.</h3>
-      <p>I say no to nine out of ten things — opportunities, meetings, noise — so the tenth gets all of me.</p>
+      <p>I say no to nine out of ten things - opportunities, meetings, noise - so the tenth gets all of me.</p>
     </div>
     <div class="method-card">
       <div class="method-num">04</div>
@@ -1380,7 +1388,7 @@ body::before {
       <div class="section-label">Right now</div>
       <h2 class="chapter-title">The chapter <em>I'm in.</em></h2>
       <p class="chapter-body">
-        I'm learning to accelerate with AI — and I'm doing it the way I do everything: in the lab first, on my own business, before I'd ever hand it to anyone else. Not the hype. The honest version. I write down what I find and send it to the list.
+        I'm learning to accelerate with AI - and I'm doing it the way I do everything: in the lab first, on my own business, before I'd ever hand it to anyone else. Not the hype. The honest version. I write down what I find and send it to the list.
       </p>
       <a href="#field-notes" class="button-primary">Get the field notes →</a>
     </div>
@@ -1511,7 +1519,7 @@ body::before {
   <p class="contact-sub">
     Speaking, media, and consulting inquiries are best sent directly. The list is the front door; this is for the conversations that need a real reply.
   </p>
-  <a href="mailto:dharsh@cannadharsh.com?subject=Inquiry%20from%20cannadharsh.com" class="contact-email">dharsh@cannadharsh.com</a>
+  <a href="mailto:cannadharsh@gmail.com?subject=Inquiry%20from%20cannadharsh.com" class="contact-email">cannadharsh@gmail.com</a>
 
   <div class="contact-details">
     <span>Based in New Jersey</span>
@@ -1527,18 +1535,20 @@ body::before {
       <div class="section-label">Field Notes</div>
       <h2 class="field-notes-title">What I'm learning, <em>as I learn it.</em></h2>
       <p class="field-notes-body">
-        No hype. No AI-bro noise. Just what's actually working for someone who has to make payroll, read a P&amp;L, and lead real people — sent when it's worth your inbox, and not before.
+        No hype. Just what's actually working for someone who has to make payroll, read a P&amp;L, and lead real people - sent when it's worth your inbox, and not before.
       </p>
     </div>
 
-    <div class="field-form" aria-label="Field Notes signup placeholder">
+    <div class="field-form" aria-label="Field Notes signup">
+      <form action="https://formspree.io/f/mjgzzyzb" method="POST">
       <div class="field-form-row">
-        <input class="field-input" type="email" placeholder="Email address" aria-label="Email address" disabled>
-        <button class="field-button" type="button" disabled>Join →</button>
+        <input class="field-input" type="email" name="email" placeholder="Email address" aria-label="Email address" required>
+        <button class="field-button" type="submit">Join →</button>
       </div>
       <p class="field-microcopy">
-        I say no to nine out of ten things. This list reflects that. Signup is coming soon; direct notes can go to <a href="mailto:dharsh@cannadharsh.com">dharsh@cannadharsh.com</a>.
+        I say no to nine out of ten things. This list reflects that. For speaking or consulting, reach Dharsh at <a href="mailto:cannadharsh@gmail.com">cannadharsh@gmail.com</a>.
       </p>
+      </form>
     </div>
   </div>
 </section>
