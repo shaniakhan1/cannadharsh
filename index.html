@@ -10,7 +10,7 @@
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%231c1815' rx='4'/><text x='16' y='25' text-anchor='middle' font-family='Georgia, serif' font-size='23' font-style='italic' fill='%23b55a3c'>D</text></svg>">
 <link rel="apple-touch-icon" href="https://cannadharsh.com/dharsh-portrait.png">
 
-<!-- Open Graph (controls previews on iMessage, LinkedIn, Facebook, WhatsApp, Slack, etc.) -->
+<!-- Open Graph -->
 <meta property="og:title" content="Dharsh Casinathen - Leadership, Learning, and Building in Real Time">
 <meta property="og:description" content="Leadership, learning, AI, and building in real time - without the hustle, noise, or burnout everyone else is selling.">
 <meta property="og:type" content="website">
@@ -37,6 +37,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Inter+Tight:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<!-- Elfsight Instagram Feed -->
+<script src="https://elfsightcdn.com/platform.js" async></script>
 
 <style>
 /* ============================================
@@ -75,7 +78,7 @@ img { display: block; max-width: 100%; }
 a { color: inherit; text-decoration: none; }
 
 /* ============================================
-   GRAIN OVERLAY - warms up the whole page
+   GRAIN OVERLAY
    ============================================ */
 body::before {
   content: '';
@@ -160,7 +163,7 @@ body::before {
 }
 
 /* ============================================
-   HERO - editorial masthead
+   HERO
    ============================================ */
 .hero {
   min-height: 100vh;
@@ -344,7 +347,7 @@ body::before {
 }
 
 /* ============================================
-   MARQUEE - credentials strip
+   MARQUEE
    ============================================ */
 .marquee {
   background: var(--ink);
@@ -386,7 +389,7 @@ body::before {
 }
 
 /* ============================================
-   STORY - the arc
+   STORY
    ============================================ */
 .story {
   padding: 10rem 3rem;
@@ -477,7 +480,7 @@ body::before {
 }
 
 /* ============================================
-   FIELD NOTES - email list placeholder
+   FIELD NOTES
    ============================================ */
 .field-notes {
   padding: 7rem 3rem;
@@ -580,7 +583,7 @@ body::before {
 }
 
 /* ============================================
-   METHOD - operating system cards
+   METHOD
    ============================================ */
 .method {
   padding: 8rem 3rem;
@@ -656,7 +659,7 @@ body::before {
 }
 
 /* ============================================
-   CURRENT CHAPTER - AI as learning chapter
+   CURRENT CHAPTER
    ============================================ */
 .chapter {
   background: var(--moss-deep);
@@ -689,7 +692,7 @@ body::before {
 }
 
 /* ============================================
-   CREDENTIALS - three-column authority grid
+   CREDENTIALS
    ============================================ */
 .credentials {
   background: var(--cream);
@@ -762,7 +765,7 @@ body::before {
 }
 
 /* ============================================
-   SPEAKING - topics as editorial entries
+   SPEAKING
    ============================================ */
 .speaking {
   padding: 10rem 3rem;
@@ -840,7 +843,33 @@ body::before {
 }
 
 /* ============================================
-   PRESS - media mentions as feature wall
+   INSTAGRAM FEED
+   ============================================ */
+.instagram-feed {
+  padding: 8rem 3rem;
+  background: var(--cream);
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+}
+
+.instagram-feed-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.instagram-title {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1;
+  letter-spacing: -0.03em;
+  font-weight: 400;
+  margin-bottom: 3rem;
+}
+
+.instagram-title em { font-style: italic; font-weight: 300; }
+
+/* ============================================
+   PRESS
    ============================================ */
 .press {
   background: var(--moss-deep);
@@ -963,7 +992,7 @@ body::before {
 }
 
 /* ============================================
-   CTA / CONTACT
+   CONTACT
    ============================================ */
 .contact {
   padding: 10rem 3rem;
@@ -1120,7 +1149,6 @@ body::before {
     padding: 7.5rem 1.5rem 3rem;
   }
   .hero-meta { left: 1.5rem; top: 5.5rem; gap: 1.25rem; font-size: 0.65rem; }
-
   .hero-actions { flex-direction: column; align-items: flex-start; }
 
   .field-notes { padding: 4.5rem 1.5rem; }
@@ -1157,6 +1185,8 @@ body::before {
   .topic:hover { padding-left: 1rem; }
   .topic-title { font-size: 1.4rem; }
 
+  .instagram-feed { padding: 5rem 1.5rem; }
+
   .press { padding: 5rem 1.5rem; }
   .press-header { flex-direction: column; gap: 1rem; align-items: flex-start; }
   .press-grid { grid-template-columns: 1fr; }
@@ -1171,7 +1201,6 @@ body::before {
   .footer-bottom { flex-direction: column; gap: 0.75rem; }
 }
 
-/* Reduce motion */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
@@ -1183,7 +1212,7 @@ body::before {
 </head>
 <body>
 
-<!-- ============ NAV ============ -->
+<!-- NAV -->
 <nav class="nav">
   <div class="nav-mark"><span>Dharsh</span> Casinathen</div>
   <ul class="nav-links">
@@ -1196,7 +1225,7 @@ body::before {
   <a href="#field-notes" class="nav-cta">Get Field Notes →</a>
 </nav>
 
-<!-- ============ HERO ============ -->
+<!-- HERO -->
 <section class="hero">
   <div class="hero-meta">
     <span>Est. Cannabis Authority</span>
@@ -1225,7 +1254,7 @@ body::before {
   </div>
 </section>
 
-<!-- ============ MARQUEE ============ -->
+<!-- MARQUEE -->
 <div class="marquee">
   <div class="marquee-track">
     <span>Certified Ganjier</span>
@@ -1235,7 +1264,6 @@ body::before {
     <span>NJBIZ Women-Owned 2024</span>
     <span>FOX 5 NY Featured</span>
     <span>Cannabis Educator</span>
-    <!-- duplicated for seamless loop -->
     <span>Certified Ganjier</span>
     <span>Co-Founder, Joyleaf</span>
     <span>Former PepsiCo Leadership</span>
@@ -1246,8 +1274,7 @@ body::before {
   </div>
 </div>
 
-
-<!-- ============ FIELD NOTES ============ -->
+<!-- FIELD NOTES -->
 <section class="field-notes" id="field-notes">
   <div class="field-notes-inner">
     <div>
@@ -1260,19 +1287,19 @@ body::before {
 
     <div class="field-form" aria-label="Field Notes signup">
       <form action="https://formspree.io/f/mjgzzyzb" method="POST">
-      <div class="field-form-row">
-        <input class="field-input" type="email" name="email" placeholder="Email address" aria-label="Email address" required>
-        <button class="field-button" type="submit">Join →</button>
-      </div>
-      <p class="field-microcopy">
-        I say no to nine out of ten things. This list reflects that. For speaking or consulting, reach Dharsh at <a href="mailto:cannadharsh@gmail.com">cannadharsh@gmail.com</a>.
-      </p>
+        <div class="field-form-row">
+          <input class="field-input" type="email" name="email" placeholder="Email address" aria-label="Email address" required>
+          <button class="field-button" type="submit">Join →</button>
+        </div>
+        <p class="field-microcopy">
+          I say no to nine out of ten things. This list reflects that. For speaking or consulting, reach Dharsh at <a href="mailto:cannadharsh@gmail.com">cannadharsh@gmail.com</a>.
+        </p>
       </form>
     </div>
   </div>
 </section>
 
-<!-- ============ STORY ============ -->
+<!-- STORY -->
 <section class="story" id="story">
   <aside class="story-sidebar">
     <div class="section-label">The Arc</div>
@@ -1305,7 +1332,7 @@ body::before {
   </div>
 </section>
 
-<!-- ============ METHOD ============ -->
+<!-- METHOD -->
 <section class="method" id="method">
   <div class="method-header">
     <div class="section-label">The method</div>
@@ -1334,12 +1361,12 @@ body::before {
     <div class="method-card">
       <div class="method-num">04</div>
       <h3>Write it before it's real.</h3>
-      <p>The week JoyLeaf opened, I wrote “now we build, one by one.” Years later, almost all of it had come true. I don't call that luck.</p>
+      <p>The week JoyLeaf opened, I wrote "now we build, one by one." Years later, almost all of it had come true. I don't call that luck.</p>
     </div>
   </div>
 </section>
 
-<!-- ============ CREDENTIALS ============ -->
+<!-- CREDENTIALS -->
 <section class="credentials" id="credentials">
   <div class="credentials-inner">
     <div class="credentials-header">
@@ -1399,7 +1426,7 @@ body::before {
   </div>
 </section>
 
-<!-- ============ CURRENT CHAPTER ============ -->
+<!-- CURRENT CHAPTER -->
 <section class="chapter" id="chapter">
   <div class="chapter-inner">
     <div>
@@ -1416,7 +1443,7 @@ body::before {
   </div>
 </section>
 
-<!-- ============ SPEAKING ============ -->
+<!-- SPEAKING -->
 <section class="speaking" id="speaking">
   <div class="speaking-header">
     <h2 class="speaking-title">Speaking <em>topics</em></h2>
@@ -1458,7 +1485,16 @@ body::before {
   </div>
 </section>
 
-<!-- ============ PRESS ============ -->
+<!-- INSTAGRAM FEED -->
+<section class="instagram-feed" id="instagram">
+  <div class="instagram-feed-inner">
+    <div class="section-label">On Instagram</div>
+    <h2 class="instagram-title">Follow the <em>field notes.</em></h2>
+    <div class="elfsight-app-2c158336-e47e-43b0-8134-217d2174ec6f" data-elfsight-app-lazy></div>
+  </div>
+</section>
+
+<!-- PRESS -->
 <section class="press" id="press">
   <div class="press-inner">
     <div class="press-header">
@@ -1530,7 +1566,7 @@ body::before {
   </div>
 </section>
 
-<!-- ============ CONTACT ============ -->
+<!-- CONTACT -->
 <section class="contact" id="contact">
   <div class="contact-eyebrow">For speaking, media, and consulting</div>
   <h2 class="contact-headline">Let's have the <em>real conversation.</em></h2>
@@ -1546,7 +1582,7 @@ body::before {
   </div>
 </section>
 
-<!-- ============ CLOSING FIELD NOTES ============ -->
+<!-- CLOSING FIELD NOTES -->
 <section class="field-notes alt" id="field-notes-closing">
   <div class="field-notes-inner">
     <div>
@@ -1559,19 +1595,19 @@ body::before {
 
     <div class="field-form" aria-label="Field Notes signup">
       <form action="https://formspree.io/f/mjgzzyzb" method="POST">
-      <div class="field-form-row">
-        <input class="field-input" type="email" name="email" placeholder="Email address" aria-label="Email address" required>
-        <button class="field-button" type="submit">Join →</button>
-      </div>
-      <p class="field-microcopy">
-        I say no to nine out of ten things. This list reflects that. For speaking or consulting, reach Dharsh at <a href="mailto:cannadharsh@gmail.com">cannadharsh@gmail.com</a>.
-      </p>
+        <div class="field-form-row">
+          <input class="field-input" type="email" name="email" placeholder="Email address" aria-label="Email address" required>
+          <button class="field-button" type="submit">Join →</button>
+        </div>
+        <p class="field-microcopy">
+          I say no to nine out of ten things. This list reflects that. For speaking or consulting, reach Dharsh at <a href="mailto:cannadharsh@gmail.com">cannadharsh@gmail.com</a>.
+        </p>
       </form>
     </div>
   </div>
 </section>
 
-<!-- ============ FOOTER ============ -->
+<!-- FOOTER -->
 <footer class="footer">
   <div class="footer-inner">
     <div>
@@ -1609,7 +1645,6 @@ body::before {
 </footer>
 
 <script>
-  // Gentle nav hide on scroll down, reveal on scroll up
   let lastScroll = 0;
   const nav = document.querySelector('.nav');
   window.addEventListener('scroll', () => {
