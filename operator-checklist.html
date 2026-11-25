@@ -20,16 +20,17 @@
 <div><p class="eyebrow">A free one-page checklist</p><h1>Run your dispensary on one page.</h1><p class="intro">24 checks across people, customer experience, inventory, and money. Find the one part of your operation that needs attention first.</p><ul class="pillars"><li>01 People</li><li>02 Customers</li><li>03 Inventory</li><li>04 Money</li></ul></div>
 <section class="card" aria-labelledby="checklist-form-title">
 <h2 id="checklist-form-title">Get the checklist</h2>
-<p>Enter your email to get the PDF in your inbox.</p>
-<!-- Enable only after a dedicated recipient-verified form and delivery email pass end-to-end testing. -->
-<form id="checklist-form" data-endpoint="" method="post">
+<p>Enter your email to unlock the one-page PDF.</p>
+<!-- Keep the launch flag off until public download access and email capture are verified. -->
+<form id="checklist-form" data-endpoint="https://formspree.io/f/mljbavan" data-launch="off" method="post">
 <label for="email">Email address</label><input id="email" name="email" type="email" autocomplete="email" required maxlength="254" disabled>
 <input name="resource" type="hidden" value="dispensary-operator-checklist">
 <label class="consent"><input type="checkbox" name="field_notes_opt_in" value="yes" disabled><span>Also send me Field Notes from Dharsh. (Optional)</span></label>
-<p class="fine" id="data-use">We’ll use your email to send the checklist. Field Notes are optional and you can unsubscribe at any time.</p>
-<button type="submit" aria-describedby="data-use" disabled>Email me the checklist</button>
+<p class="fine" id="data-use">We’ll save your email to record your checklist request. We’ll only use it for Field Notes if you opt in.</p>
+<button type="submit" aria-describedby="data-use" disabled>Unlock the checklist</button>
 <p id="form-status" class="status" role="status" aria-live="polite">Signup isn’t open yet.</p>
 </form>
+<section id="checklist-download" hidden aria-label="Checklist download"><p>Your checklist is ready.</p><a id="download-link" target="_blank" rel="noopener noreferrer">Open the checklist PDF</a></section>
 <noscript>JavaScript is needed to submit this form.</noscript>
 </section>
 </main>
@@ -40,15 +41,21 @@
   const button=form.querySelector('button');
   const status=document.querySelector('#form-status');
   const endpoint=form.dataset.endpoint;
-  const enabled=/^https:\/\/formspree\.io\/f\/[a-z0-9]+$/.test(endpoint);
+  const download=document.querySelector('#checklist-download');
+  const link=document.querySelector('#download-link');
+  const enabled=form.dataset.launch==='on' && /^https:\/\/formspree\.io\/f\/[a-z0-9]+$/.test(endpoint);
   form.addEventListener('submit',async event=>{
     event.preventDefault();
     if(!enabled||button.disabled||!form.reportValidity()) return;
     button.disabled=true;status.dataset.error='false';status.textContent='Sending your request…';
     try {
       const response=await fetch(endpoint,{method:'POST',body:new FormData(form),headers:{Accept:'application/json'},signal:AbortSignal.timeout(12000)});
-      if(!response.ok) throw new Error('Submission unavailable');
-      form.reset();status.textContent='Request received. Check your inbox for the checklist.';
+      const result=await response.json();
+      if(!response.ok || result.ok !== true) throw new Error('Submission unavailable');
+      form.reset();status.textContent='Email received. Your checklist is ready.';
+      link.href="https://drive.google.com/file/d/1AXOVnF4v1Hwzke2_x5AtHdMB27pAIGO5/view?usp=drivesdk";
+      download.hidden=false;
+      link.focus();
     } catch {
       status.dataset.error='true';status.textContent='We couldn’t confirm your request. Please try again in a moment.';
     } finally {button.disabled=false;}
