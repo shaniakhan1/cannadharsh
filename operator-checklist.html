@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>The Operator Checklist | Dharsh Casinathen</title>
+<meta name="description" content="A one-page self-audit for dispensary operators from Dharsh Casinathen.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:light;--paper:#f8f2e4;--ink:#1c1815;--muted:#594b40;--line:#c9bba8;--white:#fffaf1}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:1rem/1.55 'Inter Tight',system-ui,sans-serif}a{color:inherit}header,main,footer{width:min(1100px,100% - 2.5rem);margin:auto}header{padding:1.4rem 0;border-bottom:1px solid var(--line)}header a{text-decoration:none;font-size:.88rem;font-weight:600}main{min-height:68vh;padding:clamp(2.5rem,7vw,6rem) 0;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);align-items:center;gap:clamp(2rem,6vw,6rem)}h1,h2{font-family:Fraunces,Georgia,serif;font-weight:500;line-height:1.04;margin:.35em 0}h1{font-size:clamp(2.7rem,7vw,6.25rem);letter-spacing:-.055em}h2{font-size:1.75rem}.eyebrow{font-size:.76rem;font-weight:600;text-transform:uppercase;letter-spacing:.16em}.intro{font-size:1.16rem;max-width:37ch;color:var(--muted)}.pillars{display:flex;flex-wrap:wrap;gap:.55rem;padding:0;margin:1.8rem 0 0;list-style:none}.pillars li{padding:.25rem .72rem;border:1px solid var(--line);border-radius:2rem;font-size:.83rem}.card{padding:clamp(1.3rem,4vw,2.25rem);border:1px solid var(--line);border-radius:1.15rem;background:var(--white)}label[for=email]{display:block;font-weight:600;margin:.9rem 0 .35rem}input[type=email],button{border-radius:.45rem;width:100%;font:inherit;padding:.75rem .85rem}input[type=email]{border:1px solid #837465;background:white;color:var(--ink)}button{border:1px solid var(--ink);background:var(--ink);color:var(--white);font-weight:600;cursor:pointer;margin-top:.85rem}button:disabled{opacity:.55;cursor:not-allowed}.consent{display:flex;gap:.5rem;align-items:baseline;margin:1rem 0 .25rem}.consent input{flex:none}.fine{color:var(--muted);font-size:.83rem}.status{min-height:1.5em;margin:.75rem 0 0}.status[data-error=true]{color:#8a2922}:focus-visible{outline:3px solid #a04629;outline-offset:3px}footer{border-top:1px solid var(--line);padding:1rem 0 2rem;color:var(--muted)}@media(max-width:740px){main{grid-template-columns:1fr;gap:2rem}}
+</style>
+</head>
+<body>
+<header><a href="/">← Dharsh Casinathen</a></header>
+<main>
+<div><p class="eyebrow">A free one-page checklist</p><h1>Run your dispensary on one page.</h1><p class="intro">24 checks across people, customer experience, inventory, and money. Find the one part of your operation that needs attention first.</p><ul class="pillars"><li>01 People</li><li>02 Customers</li><li>03 Inventory</li><li>04 Money</li></ul></div>
+<section class="card" aria-labelledby="checklist-form-title">
+<h2 id="checklist-form-title">Get the checklist</h2>
+<p>Enter your email to unlock the one-page PDF.</p>
+<!-- Keep the launch flag off until public download access and email capture are verified. -->
+<form id="checklist-form" data-endpoint="https://formspree.io/f/mljbavan" data-launch="on" method="post">
+<label for="email">Email address</label><input id="email" name="email" type="email" autocomplete="email" required maxlength="254" disabled>
+<input name="resource" type="hidden" value="dispensary-operator-checklist">
+<label class="consent"><input type="checkbox" name="field_notes_opt_in" value="yes" disabled><span>Also send me Field Notes from Dharsh. (Optional)</span></label>
+<p class="fine" id="data-use">We’ll save your email to record your checklist request. We’ll only use it for Field Notes if you opt in.</p>
+<button type="submit" aria-describedby="data-use" disabled>Unlock the checklist</button>
+<p id="form-status" class="status" role="status" aria-live="polite">Signup isn’t open yet.</p>
+</form>
+<section id="checklist-download" hidden aria-label="Checklist download"><p>Your checklist is ready.</p><a id="download-link" target="_blank" rel="noopener noreferrer">Open the checklist PDF</a></section>
+<noscript>JavaScript is needed to submit this form.</noscript>
+</section>
+</main>
+<footer><small>Dharsh Casinathen · Resources for operators</small></footer>
+<script>
+(() => {
+  const form=document.querySelector('#checklist-form');
+  const button=form.querySelector('button');
+  const status=document.querySelector('#form-status');
+  const endpoint=form.dataset.endpoint;
+  const download=document.querySelector('#checklist-download');
+  const link=document.querySelector('#download-link');
+  const enabled=form.dataset.launch==='on' && /^https:\/\/formspree\.io\/f\/[a-z0-9]+$/.test(endpoint);
+  form.addEventListener('submit',async event=>{
+    event.preventDefault();
+    if(!enabled||button.disabled||!form.reportValidity()) return;
+    button.disabled=true;status.dataset.error='false';status.textContent='Sending your request…';
+    try {
+      const response=await fetch(endpoint,{method:'POST',body:new FormData(form),headers:{Accept:'application/json'},signal:AbortSignal.timeout(12000)});
+      const result=await response.json();
+      if(!response.ok || result.ok !== true) throw new Error('Submission unavailable');
+      form.reset();status.textContent='Email received. Your checklist is ready.';
+      link.href="https://drive.google.com/file/d/1AXOVnF4v1Hwzke2_x5AtHdMB27pAIGO5/view";
+      download.hidden=false;
+      link.focus();
+    } catch {
+      status.dataset.error='true';status.textContent='We couldn’t confirm your request. Please try again in a moment.';
+    } finally {button.disabled=false;}
+  });
+  if(enabled){for(const field of form.querySelectorAll('[disabled]')) field.disabled=false;status.textContent='';}
+})();
+</script>
+</body>
+</html>
