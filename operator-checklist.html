@@ -22,7 +22,7 @@
 <h2 id="checklist-form-title">Get the checklist</h2>
 <p>Enter your email to unlock the one-page PDF.</p>
 <!-- Keep the launch flag off until public download access and email capture are verified. -->
-<form id="checklist-form" data-endpoint="https://formspree.io/f/mljbavan" data-launch="off" method="post">
+<form id="checklist-form" data-endpoint="https://formspree.io/f/mljbavan" data-launch="on" method="post">
 <label for="email">Email address</label><input id="email" name="email" type="email" autocomplete="email" required maxlength="254" disabled>
 <input name="resource" type="hidden" value="dispensary-operator-checklist">
 <label class="consent"><input type="checkbox" name="field_notes_opt_in" value="yes" disabled><span>Also send me Field Notes from Dharsh. (Optional)</span></label>
@@ -53,7 +53,7 @@
       const result=await response.json();
       if(!response.ok || result.ok !== true) throw new Error('Submission unavailable');
       form.reset();status.textContent='Email received. Your checklist is ready.';
-      link.href="https://drive.google.com/file/d/1AXOVnF4v1Hwzke2_x5AtHdMB27pAIGO5/view?usp=drivesdk";
+      link.href="https://drive.google.com/file/d/1AXOVnF4v1Hwzke2_x5AtHdMB27pAIGO5/view";
       download.hidden=false;
       link.focus();
     } catch {
